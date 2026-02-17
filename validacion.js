@@ -18,3 +18,23 @@ let mensaje = document.getElementById("mensaje")
    this.value = this.value.replace(/[^a-z]/g,"")
 
  })
+
+ let password = document.getElementById("password")
+let mensajePassword = document.getElementById("mensajePassword")
+
+password.addEventListener("input", function(evento){
+
+    if(this.value.length <= 10){
+        mensajePassword.textContent = "La contraseña no es válida"
+        this.style.borderColor = "red"
+        this.style.borderWidth = "2px"
+        this.style.borderStyle = "solid"
+    }
+    else{
+        mensajePassword.textContent = "La contraseña es válida"
+        this.style.borderColor = "green"
+        this.style.borderWidth = "2px"
+        this.style.borderStyle = "solid"
+    }
+
+})
